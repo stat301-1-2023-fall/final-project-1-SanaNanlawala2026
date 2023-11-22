@@ -1,0 +1,81 @@
+---
+title: "Progress Memo 2"
+subtitle: |
+  | Final Project 
+  | Data Science 1 with R (STAT 301-1)
+author: "Sana Nanlawala"
+date: "November 22, 2023"
+format:
+  html:
+    
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+from: markdown+emoji 
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Github Repo Link
+
+<https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git>
+
+```{r}
+library(tidyverse)
+clean <- read_csv("data/clean.csv")
+raw<- read_csv("data/raw.csv")
+```
+
+## Data Cleaning
+
+The raw data originally contained many repetitive variables that could
+be combined into one variable. Originally the bar_pass_prediction
+dataset with 22407 observations on American students that entered law
+school in 1991 (this study was collected over several year, allowing the
+data collectors to gather information on whether these students
+graduated, passed the bar, etc) had 39 variables. However I was able to
+limit this to 12 variables.
+
+### Variables Kept and Adjusted:
+
+-   'ID' was kept to keep each observation/student unique. (This might
+    be removed later, but kept currently as EDA is being done)
+
+-   'birth_year' was originally 'DOB_yr' but for changed for clarity.
+    The values were also adjusted to prefix the number with '19' since
+    all the birth years were in the 1900s but originally only showed the
+    last two digits of the year.
+
+-   'ugpa' is the undergraduate gpa
+
+-   'lsat' is the lsat score
+
+-   'grad' shows whether the student graduated law school
+
+-   'fam_inc' shows family income separated by tiers (1-5)
+
+-   'law_school_tier' was originally 'tier', showing what tier law
+    school did the student attend (1-5 quintile)
+
+-   'race', originally 'race1' is the student's race
+
+-   'pass_bar' shows whether the student passed the bar. Most important
+    for analysis.
+
+-   'bar_passed_attempt' shows which attempt the student passed the bar
+    (if at all).
+
+-   'fulltime' shows if the student was a fulltime student
+
+-   'gender' is the gender of the student
+
+A lot of the factors, values, needed cleaning to be consistent with
+similar factor types across the dataset. This can be explored further in
+the clean_data.R file. There were also several variables in the raw
+dataset that were not given any explanation to their meaning (after
+extensive research)
+
+## Univariate Analysis and General Distributions
