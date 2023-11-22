@@ -79,3 +79,8 @@ dataset that were not given any explanation to their meaning (after
 extensive research)
 
 ## Univariate Analysis and General Distributions
+![](plots/birth_year_distribution.png)
+
+
+## Multivariate Analysis
+
