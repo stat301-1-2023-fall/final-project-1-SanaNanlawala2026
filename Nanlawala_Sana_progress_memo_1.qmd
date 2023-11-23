@@ -40,11 +40,13 @@ I chose this data set because I am interested in applying to law school in the f
 
 ## Data quality & complexity check
 Below, I am reading in the dataset names bar_pass_prediction. There are 39 variables, of which 9 are categorical and the other 30 are numeric. This makes sense because a lot of these variables focus on test scores and dates, while the few categoric variables focus on identifying the student with their gender, race, etc. There are some missingness issues with students not providing specific data such as their gender, race, family income, etc.
-```{r}
+```{r, echo=FALSE}
 library(tidyverse)
+library(knitr)
 bar_pass_prediction <- read_csv("data/bar_pass_prediction.csv")
 bar_pass_prediction |> 
-  slice_head(n = 5)
+  slice_head(n = 5) |> 
+  kable()
 ```
 
 ## Potential data issues

@@ -23,8 +23,9 @@ editor:
 
 <https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git>
 
-```{r}
+```{r, echo=FALSE}
 library(tidyverse)
+library(knitr)
 clean <- read_csv("data/clean.csv")
 raw<- read_csv("data/raw.csv")
 ```
@@ -84,3 +85,29 @@ extensive research)
 
 ## Multivariate Analysis
 
+### Graduation Status vs. Bar Exam Pass
+To explore students who graduated or did not graduate law school and if they passed the bar exam, I constructed a simple bar plot. First I had to omit observations that had any missing values, especially if students didn't graduate law school and CHOSE not to attempt the bar exam. (Remember this dataset shows students who at least attempted law school, i.e. entered law school in fall of 1991).
+
+Below shows the chart:
+![](plots/grad_bar_distribution.png)
+This may be surprising to some, to see a small amount of students who had not graduated and attempted the bar exam (with some even passing!). This is because there are some states that require some amount of law school (as in, not the full three years). These states are New York, Maine, and West Virginia. The 65 students who passed the bar and the 24 students who didn't pass the bar (both groups not graduating law school), must have tried for their bar exam in any of these states. 
+
+There are also states that do not require ANY law school to attempt the bar exam which are California, Vermont, Virginia, and Washington. However this dataset are all observations of students who entered law school in 1991 so it is not applicable (unless the student immediately dropped out, but that information is not available)
+
+### Family Income vs. Law School Tier
+Law school tiers (1 is the highest) is established by clusters 1-6 with ugpas and LSAT scores (highest to lowest). This is something I found after some research and will likely change the name of the variable in the future (or maybe remove this variable entirely and separate the comparison of fam_inc with lsat and ugpa separately)
+
+However, here is a faceted histogram (with 6 graphs representing each law school cluster):
+![](plots/fam_inc_tier_distribution.png)
+This information is not entirely useful until you look closely at the count of each family income level. (1 being the smallest, 5 the highest)
+
+```{r, echo=FALSE}
+fam_inc_tier <- na.omit(clean[c("fam_inc", "law_school_tier")])
+
+fam_inc_tier |> 
+  group_by(fam_inc)  |> 
+  summarize(count = n()) |> 
+  kable()
+```
+
+Clearly there is a large difference in the amount of students in this dataset that are in the first family income level vs the others (with the fourth highest income level having the most students). While this does speak to the idea that law school is a financial commitment, we are not sure how much of the students' families are contributing to their tuition, but having a certain SES status growing up may impact your decision to apply/enter law school for sure. 
