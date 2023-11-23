@@ -31,7 +31,8 @@ fam_inc_tier |>
 
 fam_inc_tier |> 
   group_by(law_school_tier)  |> 
-  summarize(count = n())
+  summarize(count = n()) |> 
+  kable()
 
 fam_inc_tier |> 
   group_by(law_school_tier,fam_inc) |> 
@@ -43,5 +44,14 @@ fam_inc_tier |>
   geom_histogram() +
   facet_wrap(~law_school_tier)
 ggsave("plots/fam_inc_tier_distribution.png")
+
+
+#Race vs. Family Income
+race_fam_inc <- na.omit(clean[c("fam_inc", "race")])
+
+race_fam_inc |> 
+  ggplot(aes(x = race, y = fam_inc)) +
+  geom_boxplot()
+ggsave("plots/race_fam_inc_distribution.png")
 
 
