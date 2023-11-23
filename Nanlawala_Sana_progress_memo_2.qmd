@@ -159,6 +159,11 @@ I would like to continue this analysis further by finding the percent of student
 I created a side by side boxplots to compare the race of the students with the family income. However, I think this is something that is not entirely related to law school (outside of these students entering law school), so I might move to appendix in the final form. 
 ![](plots/race_fam_inc_distribution.png)
 
+### Family income vs. Fulltime Status
+I wanted to explore whether there is a trend between students from different family incomes being in law school fulltime or parttime. 
+I am struggling to find a way to best share a visualization that shows this (the issue is that the family income, while numeric, is just five factors 1-5). Currently here is a histogram.
+![](plots/fulltime_fam_inc.png)
+
 ## For the future:
 
 I really want to narrow this project down in terms of relations between variables for the sake of having one direction with this project, but I feel that limiting myself is not something that will encompass all the different things that can be explored with this data. This means that I will likely have many different conclusions pertaining to different things, which I am hoping is fine. 

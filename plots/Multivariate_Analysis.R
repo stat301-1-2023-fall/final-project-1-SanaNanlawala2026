@@ -1,6 +1,9 @@
 
 library(tidyverse)
 library(knitr)
+
+clean <- read_csv("data/clean.csv")
+raw<- read_csv("data/raw.csv")
 #States that do not require you to GO to law school to take the bar exam: 
 #California, Vermont, Virginia, Washington
 
@@ -54,4 +57,10 @@ race_fam_inc |>
   geom_boxplot()
 ggsave("plots/race_fam_inc_distribution.png")
 
+# fulltime vs. fam_income
+fulltime_fam_inc <- na.omit(clean[c("fam_inc", "fulltime")])
 
+fulltime_fam_inc |> 
+  ggplot(aes(x = fulltime, y = fam_inc)) +
+  geom_boxplot()
+ggsave("plots/fulltime_fam_inc.png")
