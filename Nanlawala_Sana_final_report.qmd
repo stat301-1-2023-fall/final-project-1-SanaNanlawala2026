@@ -1,0 +1,28 @@
+---
+title: "Final Report"
+subtitle: |
+  | Final Project 
+  | Data Science 1 with R (STAT 301-1)
+author: "Sana Nanlawala"
+date: "December 6, 2023"
+format:
+  html:
+    
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+from: markdown+emoji 
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+[Github Repository](https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git)
+
+## Introduction
+
+This report will conduct on exploratory data analysis on a study called the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman. 
+
+## Data Overview
