@@ -23,6 +23,13 @@ editor:
 
 ## Introduction
 
-This report will conduct on exploratory data analysis on a study called the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman. 
+This report will conduct on exploratory data analysis on a study called the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman. This study focuses on 22,407 students who entered law school in fall of 1991. **Add what you want to explore in this**
 
-## Data Overview
+# Data Overview
+A concise high level overview of the dataset(s) being explored. Description of the dataset(s) that covers basics: size, number of observations, number, of variables, variable types, and discussion of any quality issues (especially missingness and how it may impact the analysis). Highlight any important data collection issues or concerns. If over-technical, but important, then place technical details in Appendix: technical info.
+
+# Data Exploration
+words...
+##
+
+
