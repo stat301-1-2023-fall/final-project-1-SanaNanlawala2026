@@ -27,7 +27,7 @@ editor:
 library(tidyverse)
 library(knitr)
 clean <- read_csv("data/clean.csv")
-raw<- read_csv("data/raw.csv")
+raw <- read_csv("data/raw.csv")
 ```
 
 ## Data Cleaning

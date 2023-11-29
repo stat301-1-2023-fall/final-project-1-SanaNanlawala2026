@@ -5,7 +5,7 @@ raw <- bar_pass_prediction
 write_csv(raw, "data/raw.csv")
 clean <- bar_pass_prediction |> 
   select(ID, gender, DOB_yr, ugpa, lsat, grad, fulltime, fam_inc, tier, race1, pass_bar, bar)
-
+clean <- clean
 #Kept Variables:
 
 #ID, keeps each person unique, might remove later
