@@ -2991,9 +2991,12 @@ vertical-align: -.125em;
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data-overview" id="toc-data-overview" class="nav-link" data-scroll-target="#data-overview">Data Overview</a></li>
-  <li><a href="#data-overview-1" id="toc-data-overview-1" class="nav-link" data-scroll-target="#data-overview-1">data overview</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><u>Introduction</u></a></li>
+  <li><a href="#data-overview" id="toc-data-overview" class="nav-link" data-scroll-target="#data-overview"><u>Data Overview</u></a></li>
+  <li><a href="#data-exploration" id="toc-data-exploration" class="nav-link" data-scroll-target="#data-exploration"><u>Data Exploration</u></a>
+  <ul class="collapse">
+  <li><a href="#age" id="toc-age" class="nav-link" data-scroll-target="#age">Age</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -3031,15 +3034,23 @@ Data Science 1 with R (STAT 301-1)</p><p></p>
 </header>
 
 <p><a href="https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git">Github Repository</a></p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level1">
+<h1><u>Introduction</u></h1>
 <p>This report will conduct on exploratory data analysis on a study called the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman. This study focuses on 22,407 students who entered law school in fall of 1991.</p>
+<p>The motivation for this analysis was to explore not only the demographics of law students entering law school in 1991, but to also understand how these demographics have changed over the past two decades. Law school is a large commitment, financially and otherwise, and understanding how entrance into law school is important context when examining higher education in America and the limitation of these opportunities for certain students because of their background. While personal identification-related variables such as race and gender will be examined, other things that have a direct relation to law school applications like LSAT scores and undergraduate GPAs will also be compared and measured.</p>
 </section>
-<section id="data-overview" class="level2">
-<h2 class="anchored" data-anchor-id="data-overview">Data Overview</h2>
+<section id="data-overview" class="level1">
+<h1><u>Data Overview</u></h1>
+<p>This dataset contains 22,407 observations with 12 variables that are most significant in describing the students entering law school in 1991. Reference the <em>codebook</em> for a better understanding of these variables. 6 of these variables are categorical and 6 are numerical variables. These variables have been specifically chosen from the original, raw, data collection after a series of decisions made to best encapsulate the purpose of this data collection and what it was researching. (see <em>Appendix: Technical Info</em> for more details in the data cleaning process)</p>
+<p>The variables gender, full-time, family income, law school tier, race, and birth year have some NA values that will not be included in their specific univariate and multivariate analyses, but should not have a significant impact on the final analysis. Some data collection issues that arose in building this report was the method in collecting data on the law school tier for each student. This was resolved by doing further research on the author of the original dataset/study to see with what criteria the five tiers were constructed.</p>
 </section>
-<section id="data-overview-1" class="level1">
-<h1>data overview</h1>
+<section id="data-exploration" class="level1">
+<h1><u>Data Exploration</u></h1>
+<p>To begin the exploration of this dataset, understanding the demographics of the students in 1991 entering law school was most important to gain any insight or conclusions in the changes in student population today. An often overlooked demographic variable is age, and in the context of this dataset, the age of students when entering law school (i.e. how old they are in 1991)</p>
+<section id="age" class="level3">
+<h3 class="anchored" data-anchor-id="age">Age</h3>
+<p>The original dataset recorded the birth year of each student. To enhance clarity, the collected data was transformed into the age of each student in 1991. Therefore, the reported ages represent the students’ ages as of the year 1991. It’s important to note that these ages may not precisely reflect their ages at the commencement of law school in the fall of 1991, as specific birth dates (days and months) were not provided.</p>
+</section>
 </section>
 
 </main>

@@ -1,7 +1,11 @@
 library(tidyverse)
 clean <- read_csv("data/clean.csv")
 
-#race
+# Overview of NA values in the dataset ----
+sapply(clean, function(x) sum(is.na(x)))
+# Gender, fulltime, fam_inc, law_school_tier, race, and birth_year have NA values
+
+# Race ----
 clean |> 
   drop_na(race) |> 
   ggplot(aes(x = race))+
@@ -11,7 +15,8 @@ clean |>
        x = "Race",
        y = "Number of Students")
 ggsave("plots/race_distribution.png")
-#pass bar?
+
+# pass bar? ----
 clean |> 
   ggplot(aes(x = pass_bar)) +
   geom_bar() +
@@ -21,7 +26,7 @@ clean |>
        y = "Number of Students")
 ggsave("plots/pass_bar_distribution.png")
 
-#birthyear
+# birthyear ----
 clean |> 
   filter(birth_year > 1940) |> 
   ggplot(aes(x = birth_year)) +
@@ -37,7 +42,7 @@ clean |>
   geom_bar(fill = "blue", color = "black")
 
 
-#graduate law school 
+# graduate law school ----
 clean |> 
   drop_na(grad) |> 
   ggplot(aes(x = grad))+
@@ -48,23 +53,23 @@ clean |>
        y = "Number of Students")
 ggsave("plots/grad_distribution.png")
 
-#family income
+# family income ----
 clean |> 
   ggplot(aes(x = fam_inc))+
   geom_bar()
 ggsave("fam_inc/grad_distribution.png")
 
-#gender
+# gender ----
 clean |> 
   ggplot(aes(x = gender))+
   geom_bar()
 
-#ugpa
+# ugpa ----
 clean |> 
   ggplot(aes(x = ugpa))+
   geom_bar()
 
-#as a density plot
+# as a density plot
 clean |> 
   ggplot(aes(x = ugpa))+
   geom_density(fill = "pink")
