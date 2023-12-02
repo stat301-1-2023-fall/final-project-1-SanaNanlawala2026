@@ -71,7 +71,7 @@ An often overlooked demographic variable is age, and in the context of
 this dataset, the age of students when entering law school (i.e. how old
 they are in 1991)
 
-### Age: 
+### Age:
 
 The original dataset recorded the birth year of each student. To enhance
 clarity, the collected data was transformed into the age of each student
@@ -80,6 +80,54 @@ the year 1991. It's important to note that these ages may not precisely
 reflect their ages at the commencement of law school in the fall of
 1991, as specific birth dates (days and months) were not provided.
 
-**insert stuff**
+Below is a histogram showing the distribution of law school entrants
+ages in 1991.
 
-### Race: 
+![](plots/age_distribution.png)
+
+The left-skew of this chart makes most sense because it is required for
+law school students to have received an undergraduate degree before
+entering law school in most states. Most college students are near the
+age of 18 when entering and 21-22 when leaving, which shows the majority
+of students entering law school after graduating college. However there
+are a few outliers with people as old as 80 years entering law school.
+For the sake of clarity, the few outliers of law school entrants over
+the age were filtered out from this chart.
+
+### Race:
+
+This dataset separates race into five categories: Asian, Black,
+Hispanic, White, and Other. Before examining the distribution of race
+against any other variable in this dataset, it is important to first get
+an understanding of this pool of law school entrants in 1991. Below is a
+distribution of race among 22,391 students. (information on race was
+missing for 16 students)
+
+![](plots/race_distribution.png)
+
+There is a large disparity between the number of white students versus
+students of any other race for first year law school students in 1991.
+This, unsurprisingly, has changed in the present day. According to the
+Law School Admissions Council (LSAC), the incoming class of 2022 had
+36.6% identify as students of color. More specifically, 7.8% identify as
+black, 9.4% as Hispanic, and 8.9% identify as Asian. While this
+information may not be the best form of comparison to this dataset (as
+the LSAC also considers multi-racial as a separate category and has
+other forms of identifications). There has been a larger growth in
+diversity over the past three decades. Below is a more clearer
+comparison of the two years.
+
+| Race     | 1991   | 2022  |
+|----------|--------|-------|
+| Asian    | 4.01%  | 8.9%  |
+| Black    | 6%     | 7.8%  |
+| Hispanic | 4.59%  | 9.4%  |
+| White    | 83.59% | 57.7% |
+| Other    | 1.81   | 16.2% |
+
+#### *Race and Family Income:*
+
+This datset separates the family income variable into five factors, 1-5, with 1 being the lowest family income range and 5 being the highest. While specific ranges of income are not specified, having five ordered factors are helpful in comparing. After examining the large disparities in racial identity of the law school students in 1991, examining the intersectionality between race and income seems like a necessary step in recreating the narrative of law school entrants in 1991. 
+
+![](plots/race_fam_inc_distribution.png)
+

@@ -26,15 +26,17 @@ clean |>
        y = "Number of Students")
 ggsave("plots/pass_bar_distribution.png")
 
-# birthyear ----
+# birthyear/age ----
+
 clean |> 
   filter(birth_year > 1940) |> 
-  ggplot(aes(x = birth_year)) +
+  mutate(age = 1991 - birth_year) |> 
+  ggplot(aes(x = age)) +
   geom_histogram(binwidth = 1, fill = "purple", color = "black") +
-  labs(title = "Law School Entrants in 1991: Birth Year",
-       x = "Birth Year",
+  labs(title = "Law School Entrants in 1991: Age",
+       x = "Age in 1991",
        y = "Number of Students")
-ggsave("plots/birth_year_distribution.png")
+ggsave("plots/age_distribution.png")
 
 clean |> 
   filter(birth_year > 1940) |> 

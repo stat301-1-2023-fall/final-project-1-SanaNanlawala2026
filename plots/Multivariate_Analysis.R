@@ -57,11 +57,21 @@ ggsave("plots/fam_inc_tier_distribution.png")
 
 
 #Race vs. Family Income ----
-race_fam_inc <- na.omit(clean[c("fam_inc", "race")])
 
+race_fam_inc <- clean |> 
+  na.omit(clean[c("fam_inc", "race")]) |> 
+  group_by(race, fam_inc) |> 
+  summarise(frequency = n()) |> 
+  group_by(race) |> 
+  mutate(proportion = frequency / sum(frequency))
+
+# stacked bar plot
 race_fam_inc |> 
-  ggplot(aes(x = race, y = fam_inc)) +
-  geom_boxplot()
+ggplot(aes(x = race, y = proportion, fill = fam_inc)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Proportions of Family Income by Race", y = "Proportion", x = "Race") +
+  theme_minimal() +
+  labs(fill = "Family Income")
 ggsave("plots/race_fam_inc_distribution.png")
 
 # fulltime vs. fam_income ----
