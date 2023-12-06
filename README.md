@@ -9,6 +9,8 @@ data/ :
 
 - *raw.csv* which is the original data set renamed for better clarity. 
 
+- *clean_codebook.csv* which is the codebook for the cleaned dataset
+
 plots/ :
 
 Contains all plots that are used in the final report/EDA, some of which are only included in the appendix for further information. 
