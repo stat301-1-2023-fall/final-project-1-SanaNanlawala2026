@@ -55,21 +55,35 @@ clean |>
        y = "Number of Students")
 ggsave("plots/grad_distribution.png")
 
+clean |> 
+  drop_na(grad) |> 
+  group_by(grad) |> 
+  summarize(
+    count = n()
+  ) |> 
+  kable()
 # family income ----
 clean |> 
   ggplot(aes(x = fam_inc))+
-  geom_bar()
-ggsave("fam_inc/grad_distribution.png")
+  geom_bar() +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5) +
+  labs(title = "Law School Entrants in 1991: Family Income",
+       x = "Family Income",
+       y = "Number of Students")
+ggsave("plots/fam_inc_distribution.png")
 
 # gender ----
 clean |> 
   ggplot(aes(x = gender))+
-  geom_bar()
+  geom_bar(fill = "yellow")
 
 # ugpa ----
 clean |> 
   ggplot(aes(x = ugpa))+
-  geom_bar()
+  geom_boxplot(fill = "yellow") +
+  labs(title = "Law School Entrants in 1991: Undergraduate GPA",
+       x = "Undergraduate GPA")
+ggsave("plots/ugpa_distribution.png")
 
 # as a density plot
 clean |> 
@@ -83,4 +97,13 @@ clean |>
     "Lowest UGPA" = min(ugpa)) |> 
   kable()
 
-
+# law school tier ----
+clean |> 
+  ggplot(aes(x = law_school_tier))+
+  geom_bar(fill = "orange") +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5) +
+  labs(title = "Law School Entrants in 1991: Law School Tier",
+       x = "Law School Tier",
+       y = "Number of Students") +
+  scale_x_continuous(breaks = unique(clean$law_school_tier))
+ggsave("plots/law_tier_distribution.png")

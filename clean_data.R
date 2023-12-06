@@ -64,6 +64,7 @@ clean <- clean |>
 clean <- clean |> 
   rename(law_school_tier = tier)
 
+
 write_csv(clean,"data/clean.csv")
 
 

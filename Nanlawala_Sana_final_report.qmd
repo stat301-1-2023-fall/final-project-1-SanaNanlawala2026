@@ -22,6 +22,12 @@ editor:
 [Github
 Repository](https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git)
 
+```{r, echo=FALSE}
+library(knitr)
+library(tidyverse)
+clean <- read_csv("data/clean.csv")
+```
+
 # [Introduction]{.underline}
 
 This report will conduct on exploratory data analysis on a study called
@@ -127,7 +133,89 @@ comparison of the two years.
 
 #### *Race and Family Income:*
 
-This datset separates the family income variable into five factors, 1-5, with 1 being the lowest family income range and 5 being the highest. While specific ranges of income are not specified, having five ordered factors are helpful in comparing. After examining the large disparities in racial identity of the law school students in 1991, examining the intersectionality between race and income seems like a necessary step in recreating the narrative of law school entrants in 1991. 
+This dataset separates the family income variable into five factors, 1-5,
+with 1 being the lowest family income range and 5 being the highest.
+While specific ranges of income are not specified, having five ordered
+factors are helpful in comparing. After examining the large disparities
+in racial identity of the law school students in 1991, examining the
+intersectionality between race and income seems like a necessary step in
+recreating the narrative of law school entrants in 1991.
 
-![](plots/race_fam_inc_distribution.png)
+![](plots/race_fam_inc_distribution.png) Of all Asian and white law
+school entrants, most belonged to the 4th family income level. Of the
+black, hispanic, and other racially-identifying students, the majority
+belonged to the 3rd family income level.
 
+### Family Income:
+
+As mentioned previously, family income was separated into five
+categories, numbered 1-5, with 1 being the lowest family income range.
+Below is a table showing the distribution of family income among the law
+school entrants in 1991.
+
+![](plots/fam_inc_distribution.png)
+
+As shown in the plot, most students belonged in the 4th family income range. Law school is a big financial decision as well as any other kind of decision so family income levels may influence this decision. However, it is unknown which applicants had their family supporting them financially for law school, but the sentiment remains that there maybe some influence one's family income has in making the decision to go to law school. 
+
+#### *Fulltime Status and Family Income:*
+
+When exploring the the fulltime or parttime status of students against their family income, which currently is the only variable that gives any financial identification of the student, the expectation was that students were more likely to be parttime if they were of a lower income status, for reasons such as to hold down jobs, etc. However the plot below shows a different conclusion. 
+![](plots/fulltime_fam_inc.png)
+
+There was no conclusive trend found in the proportion of fulltime and parttime students based on family income ranges. However, this does highlight law school as a large undertaking, one that probably many students intend to give their full focus to. Financial aid opportunities may also influence the decision to be fulltime vs. parttime. 
+
+### Law School Tier: 
+
+Law school tier ranked from 1-6 (1 being the highest) was  established by clusers 1-6 according to undergraduate GPAS and LSAT scores. Below shows the general distribution of applicants and their law school. 
+
+![](plots/law_tier_distribution.png)
+
+#### *Family Income and Law School Tier:*
+
+![](plots/fam_inc_tier_distribution.png)
+
+### Law School Graduation Status: 
+
+Naturally, not all students who entered law school in 1991 graduated law school. In fact, below shows the total count of students who did and did not graduate. 
+
+```{r, echo=FALSE}
+clean |> 
+  drop_na(grad) |> 
+  group_by(grad) |> 
+  summarize(
+    count = n()
+  ) |> 
+  kable()
+
+```
+
+
+#### *Graduation Status and Bar Exam Status:*
+
+This dataset shows students who at least attempted law school meaning it shows students who entered law school in fall of 1991. As it is seen earlier, there are students who did not graduate law school. However, below shows a figure that highlights an interesting conclusion about some students who did not graduate law school.  
+
+Below shows the distribution:
+
+![](plots/grad_bar_distribution.png) 
+
+This may be surprising to some, to see a small amount of students who had not
+graduated and attempted the bar exam, of which 65 passed! This is
+because there are some states that require some amount of law school (as
+in, not the full three years). These states are New York, Maine, and
+West Virginia. The 65 students who passed the bar and the 24 students
+who didn't pass the bar (both groups not graduating law school), must
+have tried for their bar exam in any of these states.
+
+There are also states that do not require ANY law school to attempt the
+bar exam which are California, Vermont, Virginia, and Washington.
+However this dataset are all observations of students who entered law
+school in 1991 so it is not applicable (unless the student immediately
+dropped out, but that information is not available)
+
+# [Conclusion]{.underline}
+
+# [References]{.underline}
+
+# [Appendix: Technical Info]{.underline}
+
+# [Appendix Extra Explorations]{.underline}
