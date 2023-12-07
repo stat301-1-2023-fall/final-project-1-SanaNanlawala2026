@@ -19,6 +19,11 @@ editor:
     wrap: 72
 ---
 
+::: {.callout-note title="Github Link"}
+[Github
+Repository](https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git)
+:::
+
 ### Overview and Purpose of EDA
 The EDA conducted on the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman in 1998 focused 22,407 students who entered law school in fall of 1991.  
 
