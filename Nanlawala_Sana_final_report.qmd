@@ -183,7 +183,7 @@ may also influence the decision to be fulltime vs. parttime.
 ### Law School Tier:
 
 Law school tier ranked from 1-6 (6 being the highest) was established by
-clusers 1-6 according to undergraduate GPAS and LSAT scores. Below shows
+clusters 1-6 according to undergraduate GPAS and LSAT scores. Below shows
 the general distribution of applicants and their law school.
 
 ![](plots/law_tier_distribution.png) Most students attended schools that
@@ -264,14 +264,13 @@ clean |>
 #### *LSAT Scores and Bar Exam Attempt*
 
 ![](plots/lsat_bar_attempt.png) More people with a higher LSAT score
-passed the bar exam on their first try. And those who did not pass the
-bar consisted of people with a lower LSAT score.
+passed the bar exam on their first try. And those who did not pass the bar consisted of people with a lower LSAT score.
 
 ### Undergraduate GPA:
 
 As always, the GPA scale in 1991 ran on a 4 point scale. It was
 interesting point of exploration to see how the undergraduate GPAs of
-1991 of law school students compare to law school students today.
+1991 of law school students compared to law school students today.
 
 ![](plots/ugpa_distribution.png)
 
@@ -293,7 +292,7 @@ the median GPA for law school students entering in 2021 was 3.55.
 #### *Undergraduate GPA and Bar Exam Attempt*
 
 Following the distribution of undergraduate GPAs it felt necessary to
-compare it to bar exam passes, specificaly the attempts at passing the
+compare it to bar exam passes, specifically the attempts at passing the
 bar exam.
 
 ![](plots/ugpa_bar_attempt.png) The results are similar to that of the
@@ -329,7 +328,7 @@ students still tried for the bar exam (likely in states that allowed for
 this pursuit) 65 passed the bar exam. LSAT scores and undergraduate GPAs
 followed a similar trend with students attempting the bar, as those with
 higher undergraduate GPAs and LSAT scores were the majority of the group
-of students who bassed the bar exam on their first try. As the scores
+of students who passed the bar exam on their first try. As the scores
 and GPA's got smaller, the students were more likely to pass on the
 second attempt or not at all.
 
@@ -338,7 +337,7 @@ today and this study would be beneficial to understand the changes. This
 should also include creating a concrete method of converting the raw
 LSAT score range used in 1991 to the ranges today, somehow accounting
 for the changes in test difficulty as well. After some extensive
-research, many argued their was little worth in trying to convert the
+research, many argued there was little worth in trying to convert the
 values. Another variable to research for might be personal income, as
 many might not be financially supported by their families and might even
 be taking out loans for their law school education.

@@ -1,0 +1,40 @@
+---
+title: "Executive Summary: An Exploration on American Law School Students in 1991"
+subtitle: |
+  | Final Project 
+  | Data Science 1 with R (STAT 301-1)
+author: "Sana Nanlawala"
+date: "December 6, 2023"
+format:
+  html:
+    
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  warning: false
+from: markdown+emoji 
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+### Overview and Purpose of EDA
+The EDA conducted on the LSAC National Longitudinal Bar Passage Study completed in 1998 by Linda Wightman in 1998 focused 22,407 students who entered law school in fall of 1991.  
+
+The motivation for this analysis was to explore not only the
+demographics of law students entering law school in 1991, but to also understand how these demographics have changed over the past two decades. Specific distributions were measured in this exploratory dataset. Measurements of age, racial identity, family income, and law school tiers of the students in this data were preliminary explorations to get a general understanding of the dataset. For deeper analysis, multivariate analyses were completed between variables such as family income, fulltime student status, race, law school tier, bar exam status/attempts, LSAT scores, graduation status, and undergraduate GPAs. 
+
+These specific explorations allowed to gain an understanding of law school student population three decades ago, and have the ability to make comparisons with law students today if possible (or for future studies). Law school is generally understood and a hefty financial investment, and expect students with the necessary academic background to meet the requirements of the school they attend. However, it is acknowledged that there are factors cannot be controlled by a student that may affect a their ability to either enter law school, graduate, or even attempt the bar exam. Racial identity and family income are two important variables that address this, which is why it was an important part of this exploration against distributions like that of scores and law school tiers. 
+
+## Resulting Conclusions
+
+The analysis begins with a demographic overview, emphasizing age, race, family income, and law school tier. The age distribution reveals a left-skewed pattern, aligning with the prerequisite of having an undergraduate degree before law school entry, as most students seem to go to law school right after college. Race distribution highlights a significant disparity, with white students dominating the law student population in 1991. The Intersectionality between race and family income unveils some patterns, with Asian and white students often belonging to higher income levels. The distribution of family income indicates that most students fall within the fourth income range, emphasizing the financial aspect of law school decision-making. 
+
+When exploring full-time status against family income, it revealed no conclusive trends, suggesting law school to be a substantial time commitment regardless of income. A general univariate analysis of law school tier analysis indicated most students falling in tiers 3 and 4, reflecting a broad distribution of applicants across different-ranked institutions. Examining graduation rates, the study identified a small group of students who did not graduate but attempted the bar exam. Surprisingly, some students passed the bar without completing law school, reflecting the possibility of different state-specific prerequisites for attempting the bar exam. 
+
+Continuing on examining the bar exam, analyzing the bar exam attempts revealed a correlation with LSAT scores and undergraduate GPAs. Higher scores and GPAs were associated with success in attempting the bar exam for the first time. The median undergraduate GPA for 1991 law school entrants was found to be 3.2, lower than modern-day GPA medians—specifically 3.55 in 2021. 
+
+## Further Studies
+This EDA sheds light on demographic patterns among law school entrants in 1991, emphasizing racial disparities, family income influence, and academic performance correlations with bar exam outcomes. Comparisons with more recent data could enhance future studies. This can include creating a concrete method of converting the raw LSAT score range used in 1991 to the ranges today, as well as exploring personal income, as
+many might not be financially supported by their families. 
