@@ -31,9 +31,10 @@ clean <- read_csv("data/clean.csv")
 # [Introduction]{.underline}
 
 This report will conduct on exploratory data analysis on a study called
-the [LSAC National Longitudinal Bar Passage Study](https://eric.ed.gov/?id=ED469370) completed in 1998 by
-Linda Wightman. This study focuses on 22,407 students who entered law
-school in fall of 1991.
+the [LSAC National Longitudinal Bar Passage
+Study](https://eric.ed.gov/?id=ED469370) completed in 1998 by Linda
+Wightman. This study focuses on 22,407 students who entered law school
+in fall of 1991.
 
 The motivation for this analysis was to explore not only the
 demographics of law students entering law school in 1991, but to also
@@ -70,7 +71,7 @@ criteria the five tiers were constructed.
 
 To begin the exploration of this dataset, understanding the demographics
 of the students in 1991 entering law school was most important to gain
-any insight or conclusions in the changes in student population today. 
+any insight or conclusions in the changes in student population today.
 
 An often overlooked demographic variable is age, and in the context of
 this dataset, the age of students when entering law school (i.e. how old
@@ -113,14 +114,15 @@ missing for 16 students)
 There is a large disparity between the number of white students versus
 students of any other race for first year law school students in 1991.
 This, unsurprisingly, has changed in the present day. According to the
-[Law School Admissions Council (LSAC)](https://www.lsac.org/blog/incoming-class-2022-major-advance-diversity-more-work-to-do), the incoming class of 2022 had
-36.6% identify as students of color. More specifically, 7.8% identify as
-black, 9.4% as Hispanic, and 8.9% identify as Asian. While this
-information may not be the best form of comparison to this dataset (as
-the LSAC also considers multi-racial as a separate category and has
-other forms of identifications). There has been a larger growth in
-diversity over the past three decades. Below is a more clearer
-comparison of the two years.
+[Law School Admissions Council
+(LSAC)](https://www.lsac.org/blog/incoming-class-2022-major-advance-diversity-more-work-to-do),
+the incoming class of 2022 had 36.6% identify as students of color. More
+specifically, 7.8% identify as black, 9.4% as Hispanic, and 8.9%
+identify as Asian. While this information may not be the best form of
+comparison to this dataset (as the LSAC also considers multi-racial as a
+separate category and has other forms of identifications). There has
+been a larger growth in diversity over the past three decades. Below is
+a more clearer comparison of the two years.
 
 | Race     | 1991   | 2022  |
 |----------|--------|-------|
@@ -132,13 +134,14 @@ comparison of the two years.
 
 #### *Race and Family Income:*
 
-This dataset separates the family income variable into five factors, 1-5,
-with 1 being the lowest family income range and 5 being the highest.
-While specific ranges of income are not specified, having five ordered
-factors are helpful in comparing. After examining the large disparities
-in racial identity of the law school students in 1991, examining the
-intersectionality between race and income seems like a necessary step in
-recreating the narrative of law school entrants in 1991.
+This dataset separates the family income variable into five factors,
+1-5, with 1 being the lowest family income range and 5 being the
+highest. While specific ranges of income are not specified, having five
+ordered factors are helpful in comparing. After examining the large
+disparities in racial identity of the law school students in 1991,
+examining the intersectionality between race and income seems like a
+necessary step in recreating the narrative of law school entrants in
+1991.
 
 ![](plots/race_fam_inc_distribution.png) Of all Asian and white law
 school entrants, most belonged to the 4th family income level. Of the
@@ -154,31 +157,59 @@ school entrants in 1991.
 
 ![](plots/fam_inc_distribution.png)
 
-As shown in the plot, most students belonged in the 4th family income range. Law school is a big financial decision as well as any other kind of decision so family income levels may influence this decision. However, it is unknown which applicants had their family supporting them financially for law school, but the sentiment remains that there maybe some influence one's family income has in making the decision to go to law school. 
+As shown in the plot, most students belonged in the 4th family income
+range. Law school is a big financial decision as well as any other kind
+of decision so family income levels may influence this decision.
+However, it is unknown which applicants had their family supporting them
+financially for law school, but the sentiment remains that there maybe
+some influence one's family income has in making the decision to go to
+law school.
 
 #### *Fulltime Status and Family Income:*
 
-When exploring the the fulltime or parttime status of students against their family income, which currently is the only variable that gives any financial identification of the student, the expectation was that students were more likely to be parttime if they were of a lower income status, for reasons such as to hold down jobs, etc. However the plot below shows a different conclusion. 
-![](plots/fulltime_fam_inc.png)
+When exploring the the fulltime or parttime status of students against
+their family income, which currently is the only variable that gives any
+financial identification of the student, the expectation was that
+students were more likely to be parttime if they were of a lower income
+status, for reasons such as to hold down jobs, etc. However the plot
+below shows a different conclusion. ![](plots/fulltime_fam_inc.png)
 
-There was no conclusive trend found in the proportion of fulltime and parttime students based on family income ranges. However, this does highlight law school as a large undertaking, one that probably many students intend to give their full focus to. Financial aid opportunities may also influence the decision to be fulltime vs. parttime. 
+There was no conclusive trend found in the proportion of fulltime and
+parttime students based on family income ranges. However, this does
+highlight law school as a large undertaking, one that probably many
+students intend to give their full focus to. Financial aid opportunities
+may also influence the decision to be fulltime vs. parttime.
 
-### Law School Tier: 
+### Law School Tier:
 
-Law school tier ranked from 1-6 (6 being the highest) was established by clusers 1-6 according to undergraduate GPAS and LSAT scores. Below shows the general distribution of applicants and their law school. 
+Law school tier ranked from 1-6 (6 being the highest) was established by
+clusers 1-6 according to undergraduate GPAS and LSAT scores. Below shows
+the general distribution of applicants and their law school.
 
-![](plots/law_tier_distribution.png)
-Most students attended schools that were ranked either 3 or 4, with the lowest number of students attending schools ranked 1. 
+![](plots/law_tier_distribution.png) Most students attended schools that
+were ranked either 3 or 4, with the lowest number of students attending
+schools ranked 1.
 
 #### *Family Income and Law School Tier:*
-Another interesting exploration was to compare family income ranges with the law school tiers that the students attended. (again, the law schools were ranked by and undefined analysis of undergraduate GPA and LSAT scores)
 
-![](plots/fam_inc_tier_distribution.png)
-While the law school tiers directly reference the scores and GPAs, it is a general conclusion that more prestigious universities accept students with higher LSAT scores and GPAs, meaning they would rank higher on the list. By family income, the most students who attended law schools ranked 6 were of the fifth family income range while the most students who attended law schools ranked 1 were of the first family income range. 
+Another interesting exploration was to compare family income ranges with
+the law school tiers that the students attended. (again, the law schools
+were ranked by and undefined analysis of undergraduate GPA and LSAT
+scores)
 
-### Law School Graduation Status: 
+![](plots/fam_inc_tier_distribution.png) While the law school tiers
+directly reference the scores and GPAs, it is a general conclusion that
+more prestigious universities accept students with higher LSAT scores
+and GPAs, meaning they would rank higher on the list. By family income,
+the most students who attended law schools ranked 6 were of the fifth
+family income range while the most students who attended law schools
+ranked 1 were of the first family income range.
 
-Naturally, not all students who entered law school in 1991 graduated law school. In fact, below shows the total count of students who did and did not graduate. 
+### Law School Graduation Status:
+
+Naturally, not all students who entered law school in 1991 graduated law
+school. In fact, below shows the total count of students who did and did
+not graduate.
 
 ```{r, echo=FALSE}
 clean |> 
@@ -191,19 +222,22 @@ clean |>
 
 ```
 
-
 #### *Graduation Status and Bar Exam Status:*
 
-This dataset shows students who at least attempted law school meaning it shows students who entered law school in fall of 1991. As it is seen earlier, there are students who did not graduate law school. However, below shows a figure that highlights an interesting conclusion about some students who did not graduate law school.  
+This dataset shows students who at least attempted law school meaning it
+shows students who entered law school in fall of 1991. As it is seen
+earlier, there are students who did not graduate law school. However,
+below shows a figure that highlights an interesting conclusion about
+some students who did not graduate law school.
 
 Below shows the distribution:
 
-![](plots/grad_bar_distribution.png) 
+![](plots/grad_bar_distribution.png)
 
-This may be surprising to some, to see a small amount of students who had not
-graduated and attempted the bar exam, of which 65 passed! This is
-because there are some states that require some amount of law school (as
-in, not the full three years). These states are New York, Maine, and
+This may be surprising to some, to see a small amount of students who
+had not graduated and attempted the bar exam, of which 65 passed! This
+is because there are some states that require some amount of law school
+(as in, not the full three years). These states are New York, Maine, and
 West Virginia. The 65 students who passed the bar and the 24 students
 who didn't pass the bar (both groups not graduating law school), must
 have tried for their bar exam in any of these states.
@@ -215,7 +249,10 @@ school in 1991 so it is not applicable (unless the student immediately
 dropped out, but that information is not available)
 
 ### Bar Exam Attempts:
-For those did pass the bar exam, data was collected on when they passed the bar (as in, which attempt did they pass). This data can be seen in the table below: 
+
+For those did pass the bar exam, data was collected on when they passed
+the bar (as in, which attempt did they pass). This data can be seen in
+the table below:
 
 ```{r, echo= FALSE}
 clean |> 
@@ -224,16 +261,20 @@ clean |>
   kable()
 ```
 
-
 #### *LSAT Scores and Bar Exam Attempt*
 
-![](plots/lsat_bar_attempt.png)
-More people with a higher LSAT score passed the bar exam on their first try. And those who did not pass the bar consisted of people with a lower LSAT score.
+![](plots/lsat_bar_attempt.png) More people with a higher LSAT score
+passed the bar exam on their first try. And those who did not pass the
+bar consisted of people with a lower LSAT score.
 
-### Undergraduate GPA: 
-As always, the GPA scale in 1991 ran on a 4 point scale. It was interesting point of exploration to see how the undergraduate GPAs of 1991 of law school students compare to law school students today. 
+### Undergraduate GPA:
+
+As always, the GPA scale in 1991 ran on a 4 point scale. It was
+interesting point of exploration to see how the undergraduate GPAs of
+1991 of law school students compare to law school students today.
 
 ![](plots/ugpa_distribution.png)
+
 ```{r, echo = FALSE}
 clean |> 
   summarise(
@@ -243,23 +284,78 @@ clean |>
   kable()
 ```
 
-The median undergraduate GPA for students entering law school in 1991 was 3.2. This number, unsurprisingly is less than the median GPAs in recent years. According to [U.S. News,](https://www.usnews.com/education/best-graduate-schools/top-law-schools/applying/articles/what-is-a-good-college-gpa-for-a-law-school-applicant#:~:text=Among%20the%20191%20ranked%20law,GPA%20is%20much%20higher%20%E2%80%93%203.86.) the median GPA for law school students entering in 2021 was 3.55. 
+The median undergraduate GPA for students entering law school in 1991
+was 3.2. This number, unsurprisingly is less than the median GPAs in
+recent years. According to [U.S.
+News,](https://www.usnews.com/education/best-graduate-schools/top-law-schools/applying/articles/what-is-a-good-college-gpa-for-a-law-school-applicant#:~:text=Among%20the%20191%20ranked%20law,GPA%20is%20much%20higher%20%E2%80%93%203.86.)
+the median GPA for law school students entering in 2021 was 3.55.
 
 #### *Undergraduate GPA and Bar Exam Attempt*
-Following the distribution of undergraduate GPAs it felt necessary to compare it to bar exam passes, specificaly the attempts at passing the bar exam.
 
-![](plots/ugpa_bar_attempt.png)
-The results are similar to that of the distribution comparing LSAT scores with the bar exam attempts. More people with a higher undergraduate GPA passed the bar exam on their first try. And those who did not pass the bar consisted of people with a lower GPA. 
+Following the distribution of undergraduate GPAs it felt necessary to
+compare it to bar exam passes, specificaly the attempts at passing the
+bar exam.
+
+![](plots/ugpa_bar_attempt.png) The results are similar to that of the
+distribution comparing LSAT scores with the bar exam attempts. More
+people with a higher undergraduate GPA passed the bar exam on their
+first try. And those who did not pass the bar consisted of people with a
+lower GPA.
 
 # [Conclusion]{.underline}
-Overall, this study took a turn in focusing on demographic variables in its EDA. Some conclusions that were drawn from this EDA was the lack of racial diversity in law school students in 1991, with white students being nearly 84% of the population in this study. For black and hispanic law school students in this study, the majority were in the third family income range (and also having the most students in the first family income range).
 
-Family income was another important venue of exploration in this study, as law school generally is a big financial investment. Most of the students in this study belonged in the second highest family income range. There was no significant pattern between fulltime and parttime students and their family income. Law school tiers, which was ranked from 1-6 (based on clusters of undergraduate GPAs and LSAT scores) was another good comparison with family income. The most students who attended law schools ranked 6 were of the fifth family income range while the most students who attended law schools ranked 1 were of the first family income range.
+Overall, this study took a turn in focusing on demographic variables in
+its EDA. Some conclusions that were drawn from this EDA was the lack of
+racial diversity in law school students in 1991, with white students
+being nearly 84% of the population in this study. For black and hispanic
+law school students in this study, the majority were in the third family
+income range (and also having the most students in the first family
+income range).
 
-Unsurprisingly, there were students who did not graduate law school after entering in the fall of 1991. Of those that did not graduate, 89 students still tried for the bar exam (likely in states that allowed for this pursuit) 65 passed the bar exam. LSAT scores and undergraduate GPAs followed a similar trend with students attempting the bar, as those with higher undergraduate GPAs and LSAT scores were the majority of the group of students who bassed the bar exam on their first try. As the scores and GPA's got smaller, the students were more likely to pass on the second attempt or not at all. 
+Family income was another important venue of exploration in this study,
+as law school generally is a big financial investment. Most of the
+students in this study belonged in the second highest family income
+range. There was no significant pattern between fulltime and parttime
+students and their family income. Law school tiers, which was ranked
+from 1-6 (based on clusters of undergraduate GPAs and LSAT scores) was
+another good comparison with family income. The most students who
+attended law schools ranked 6 were of the fifth family income range
+while the most students who attended law schools ranked 1 were of the
+first family income range.
 
-For future studies, comparisons between recent studies on law students today and this study would be beneficial to understand the changes. This should also include creating a concrete method of converting the raw LSAT score range used in 1991 to the ranges today, somehow accounting for the changes in test difficulty as well. After some extensive research, many argued their was little worth in trying to convert the values. Another variable to research for might be personal income, as many might not be financially supported by their families and might even be taking out loans for their law school education. 
+Unsurprisingly, there were students who did not graduate law school
+after entering in the fall of 1991. Of those that did not graduate, 89
+students still tried for the bar exam (likely in states that allowed for
+this pursuit) 65 passed the bar exam. LSAT scores and undergraduate GPAs
+followed a similar trend with students attempting the bar, as those with
+higher undergraduate GPAs and LSAT scores were the majority of the group
+of students who bassed the bar exam on their first try. As the scores
+and GPA's got smaller, the students were more likely to pass on the
+second attempt or not at all.
+
+For future studies, comparisons between recent studies on law students
+today and this study would be beneficial to understand the changes. This
+should also include creating a concrete method of converting the raw
+LSAT score range used in 1991 to the ranges today, somehow accounting
+for the changes in test difficulty as well. After some extensive
+research, many argued their was little worth in trying to convert the
+values. Another variable to research for might be personal income, as
+many might not be financially supported by their families and might even
+be taking out loans for their law school education.
 
 # [References]{.underline}
 
+Krinsky, S. L. (2022, December). *Incoming Class of 2022: A Major
+Advance in Diversity, More Work to Do*. LSAC.
+<https://www.lsac.org/blog/incoming-class-2022-major-advance-diversity-more-work-to-do>
 
+Merson, D. (2023, May). *Can You Take the Bar Exam Without Going To Law
+School?* Juris Education.
+<https://www.juriseducation.com/blog/can-you-take-the-bar-exam-without-going-to-law-school>
+
+Wightman, L.F. (1998). *LSAC National Longitudinal Bar Passage Study.
+LSAC Research Report Series.* Eric. <https://eric.ed.gov/?id=ED469370>
+
+Wood, S. (2023, January). *What Is a Good College GPA for a Law School
+Applicant?* U.S. News.
+<https://www.usnews.com/education/best-graduate-schools/top-law-schools/applying/articles/what-is-a-good-college-gpa-for-a-law-school-applicant>
