@@ -19,6 +19,7 @@ clean <- clean
 #tier, what tier law school did the student attend by quintile
 #race1, accurate assessment of race without the extra, unnecessary columns,
 #pass_bar, most important for analysis.
+# bar attempt 
 
 #research was done on this study: the data collected was on students starting law school in 1991.
 #Adding the full year to the birth year

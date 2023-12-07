@@ -1,4 +1,5 @@
 library(tidyverse)
+library(knitr)
 clean <- read_csv("data/clean.csv")
 
 # Overview of NA values in the dataset ----
@@ -85,14 +86,9 @@ clean |>
        x = "Undergraduate GPA")
 ggsave("plots/ugpa_distribution.png")
 
-# as a density plot
-clean |> 
-  ggplot(aes(x = ugpa))+
-  geom_density(fill = "pink")
-
 clean |> 
   summarise(
-    "Mean UGPA" = mean(ugpa),
+    "Median UGPA" = median(ugpa),
     "Highest UGPA" = max(ugpa),
     "Lowest UGPA" = min(ugpa)) |> 
   kable()
@@ -107,3 +103,9 @@ clean |>
        y = "Number of Students") +
   scale_x_continuous(breaks = unique(clean$law_school_tier))
 ggsave("plots/law_tier_distribution.png")
+
+# bar pass attempt ----
+clean |> 
+  group_by(bar_passed_attempt) |> 
+  summarise(n = n()) |> 
+  kable()

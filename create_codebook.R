@@ -12,7 +12,8 @@ description_6 = "if the student graduated law school (yes/no)"
 description_7 = "whether the student is fulltime or not."
 description_8 = "family income separated by groups (1-5) 1 is the 
 lowest range"
-description_9 = "the tier of law school the student attended"
+description_9 = "the tier of law school the student attended (1-6) 6 
+being the highest"
 description_10 = "the race of the student"
 description_11 = "if the student passed the bar exam"
 description_12 = "when the student passed the bar, if they did"
