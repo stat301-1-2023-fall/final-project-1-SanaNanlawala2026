@@ -1,8 +1,5 @@
 ---
 title: "Executive Summary: An Exploration on American Law School Students in 1991"
-subtitle: |
-  | Final Project 
-  | Data Science 1 with R (STAT 301-1)
 author: "Sana Nanlawala"
 date: "December 6, 2023"
 format:
