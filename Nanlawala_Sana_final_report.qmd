@@ -20,7 +20,7 @@ editor:
 ---
 ::: {.callout-note title="Github Link"}
 [Github
-Repository](https://github.com/stat301-1-2023-fall/final-project-1-SanaNanlawala2026.git)
+Repository](https://github.com/snanlawala15/LSAC_EDA.git)
 :::
 
 
